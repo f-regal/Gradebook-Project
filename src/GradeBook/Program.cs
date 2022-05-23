@@ -4,25 +4,29 @@
 using System;
 
 namespace GradeBook // Note: actual namespace depends on the project name.
+// Up Next: Adding a Constructor
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            var numbers = new[] {1.1, 2.2, 3.3};
-            var Grades = new List<double>() {12.7, 10.3, 6.11, 4.1};
+            var book = new Book();
+            book.AddGrade(89.1);
 
+            var grades = new List<double>() {12.7, 10.3, 6.11, 4.1};
+            // var sum = 0.0;
 
+            // foreach(var num in grades) {
+            //     sum += num;
+            // }
 
-            var sum = 0.0;
+            // Console.WriteLine(sum);
+            // Console.WriteLine(sum/(Grades.Count));
 
-            foreach(var num in Grades) {
-                sum += num;
+            foreach(var grade in grades) {
+                System.Console.WriteLine(grade);
             }
-
-            Console.WriteLine(sum);
-            Console.WriteLine(sum/(Grades.Count));
         }
     }
 }
