@@ -15,18 +15,19 @@ namespace GradeBook // Note: actual namespace depends on the project name.
             book.AddGrade(89.1);
 
             var grades = new List<double>() {12.7, 10.3, 6.11, 4.1};
-            // var sum = 0.0;
+            grades.Add(56.1);
 
-            // foreach(var num in grades) {
-            //     sum += num;
-            // }
 
-            // Console.WriteLine(sum);
-            // Console.WriteLine(sum/(Grades.Count));
+            var result = 0.0;
 
-            foreach(var grade in grades) {
-                System.Console.WriteLine(grade);
+            foreach(var num in grades) {
+                result += num;
             }
+
+            result /= grades.Count();
+
+            Console.WriteLine($"Average result: {result:N1}");
+            
         }
     }
 }
